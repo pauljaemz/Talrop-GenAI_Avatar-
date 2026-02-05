@@ -82,7 +82,7 @@ You can modify these settings in `main.py`:
 - LLM Model: Currently uses `mistralai/Mistral-7B-Instruct-v0.3` (can be changed to other HuggingFace models)
 - Embeddings Model: Uses `sentence-transformers/all-MiniLM-L6-v2` (runs locally)
 
-## Requirements
+## Requirement
 
 - Python 3.9+
 - HuggingFace API token (free)
