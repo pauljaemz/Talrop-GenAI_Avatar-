@@ -4,5 +4,8 @@
 /chroma_db
 /.env
 /env
+__pycache__
 
 /*.pdf
+
+testing
