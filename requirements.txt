@@ -3,6 +3,8 @@ langchain-community
 langchain-huggingface
 langchain-chroma
 langchain-text-splitters
+langchain-experimental
+langchain-core
 chromadb
 pypdf
 python-dotenv
