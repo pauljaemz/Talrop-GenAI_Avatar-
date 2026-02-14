@@ -1,13 +1,3 @@
-import os
-import sys
-import hashlib
-from dotenv import load_dotenv
-
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.document_loaders import PyPDFLoader, TextLoader
-from langchain_huggingface import HuggingFaceEmbeddings, HuggingFaceEndpoint, ChatHuggingFace
-from langchain_chroma import Chroma
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import HumanMessage, AIMessage
 from vector_store import VectorStoreManager
 from chat import build_rag_chain
@@ -26,13 +16,6 @@ def print_help():
 ║  reset                    - Reset chat history               ║
 ║  help                     - Show this help message           ║
 ║  exit / quit              - Exit the chatbot                 ║
-║                                                              ║
-║  🎭 Personality Commands:                                    ║
-║  personality <type>       - Set chatbot personality          ║
-║  personalities            - List available personalities     ║
-║                                                              ║
-║  Available personalities: professional, friendly, concise,   ║
-║                          teacher, creative, custom           ║
 ╚══════════════════════════════════════════════════════════════╝
     """)
 
@@ -68,7 +51,6 @@ def main():
             if not user_input:
                 continue
 
-            # Parse commands
             parts = user_input.split()
             command = parts[0].lower()
 
@@ -166,4 +148,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
